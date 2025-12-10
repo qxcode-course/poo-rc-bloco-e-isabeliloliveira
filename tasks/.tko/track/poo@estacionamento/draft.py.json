@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-10_13-39-40",
+            "content": "@@ -1,244 +0,0 @@\n-from abc import ABC, abstractclassmethod%0A%0Aclass Veiculo:%0A    def __init__(self, id:str, tipo: str):%0A        self.__id=id%0A        self.__tipo=tipo%0A    %0A    def getEntrada(self):%0A        # return self.%0A%0A    def setEntrada(self, horaEntrada: int):\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-10_13-47-37",
+            "content": "@@ -90,34 +90,16 @@\n ipo: str\n-, horaEntrada: int\n ):%0A     \n@@ -147,43 +147,8 @@\n     \n-    self.__horaEntrada=horaEntrada%0A\n %0A   \n@@ -169,32 +169,34 @@\n a(self):%0A       \n+ #\n  return self.__h\n@@ -196,21 +196,8 @@\n elf.\n-__horaEntrada\n %0A%0A  \n@@ -241,109 +241,4 @@\n nt):\n-%0A%0A%0A    def getTipo(self):%0A        return self.__tipo%0A%0A    def getID(self):%0A        return self.__id%0A    %0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-12-10_13-52-55",
+            "content": "@@ -52,15 +52,10 @@\n culo\n-(ABC)\n :%0A\n+\n     \n@@ -306,47 +306,9 @@\n t):%0A\n-        self.__horaEntrada=horaEntrada\n %0A\n+\n %0A   \n@@ -410,553 +410,4 @@\n    %0A\n-    @abstractmethods%0A%0A    def calcularValor(self):%0A        pass%0A%0A    def __str__(self):%0A        return f%22%22%0A%0A%0A%0Aclass Bike(Veiculo):%0A    def __init__(self, id: str, tipo: str):%0A        super().__init__(id, tipo)%0A%0A    def calcularValor(self, horaSaida: int):%0A%0A%0Aclass Moto(Veiculo):%0A    def __init__(self, id: str, tipo: str):%0A        super().__init__(id, tipo)%0A%0A    def calcularValor(sel, horaSaida: int):%0A%0Aclass Carro(Veiculo):%0A    def __init__(self, id: str, tipo: str):%0A        super().__init__(id, tipo)%0A%0A    def calcularValor(sel, horaSaida: int):\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-10_14-13-27",
+            "content": "@@ -558,58 +558,8 @@\n n f%22\n-%7Bself.__tipo%7D : %7Bself.__id%7D : %7Bself.__horaEntrada%7D\n %22%0A%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-10_14-23-06",
+            "content": "@@ -1052,51 +1052,4 @@\n nt):\n-%0A%0A%0Aclass Estacionamento:%0A%0A%0Adef main():%0A%0A%0Amain()\n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-10_14-24-04",
+            "content": "@@ -1022,33 +1022,32 @@\n alcularValor(sel\n-f\n , horaSaida: int\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-10_14-28-45",
+            "content": "from abc import ABC, abstractclassmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id:str, tipo: str, horaEntrada: int):\n        self.__id=id\n        self.__tipo=tipo\n        self.__horaEntrada=horaEntrada\n\n    def getEntrada(self):\n        return self.__horaEntrada\n\n    def setEntrada(self, horaEntrada: int):\n        self.__horaEntrada=horaEntrada\n\n    def getTipo(self):\n        return self.__tipo\n\n    def getID(self):\n        return self.__id\n    \n    @abstractmethods\n\n    def calcularValor(self):\n        pass\n\n    def __str__(self):\n        return f\"{self.__tipo} : {self.__id} : {self.__horaEntrada}\"\n\n\n\nclass Bike(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n\n\nclass Moto(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(sel, horaSaida: int):\n\nclass Carro(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n\n\nclass Estacionamento:\n\n\ndef main():\n\n\nmain()",
+            "lines": "57"
+        }
+    ]
+}
