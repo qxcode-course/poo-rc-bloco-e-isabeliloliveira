@@ -1,11 +1,12 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
-class Metodo(ABC):
-    @abstractclassmethod
-    def realizarP(self, valor: float):
+# class Metodo(ABC):
+#     @abstractmethod
+#     def realizarP(self, valor: float):
+#         pass
         
-class Pagamento:
-    def __init__(self, valor : float, descricao: str, metodo: Metodo):
+class Pagamento(ABC):
+    def __init__(self, valor : float, descricao: str):
         self.valor: float=valor
         self.descricao: str=descricao
 
@@ -28,7 +29,7 @@ class Pix(Pagamento):
         self.banco=banco
 
     def processar(self):
-        print(f"Pagando pix produto {self.descricao} para {self.chave} do banco {self.banco} no valor de {self.valor}")
+        print(f"PIX enviado via {self.banco} usando chave {self.chave}")
     
 def processar_pagamento(pagamento: Pagamento):
     pagamento.validar_valor()
@@ -44,11 +45,38 @@ class CartaoCredito(Pagamento):
 
     def processar(self):
         if self.valor>self.limite:
-            print("Liso!!!!")  
+            print(f"Erro: Limite insuficiente no cartão {self.numero}")  
             return
-        self.limite-=self.valor
+        else:
+            self.limite-=self.valor
+            print(f"Pagamento aprovado no cartão Cliente {self.nome}. Limite restante: {self.limite}")
 
+class Boleto(Pagamento):
+    def __init__(self, valor: float, descricao: str, cod_barras: float, vencimento: int):
+        super().__init__(valor, descricao)
+        self.cod_barras=cod_barras
+        self.venc=vencimento
+    
+    def processar(self):
+        print("Boleto gerado. Aguardando pagamento...")
 
+pagamentos = [
+    Pix(150, "Camisa esportiva", "email@ex.com", "Banco XPTO"),
+    CartaoCredito(400, "Tênis esportivo", "1234 5678 9123 4567", "Cliente X", 500),
+    Boleto(89.90, "Livro de Python", "123456789000", "2025-01-10"),
+    CartaoCredito(800, "Notebook", "9999 8888 7777 6666", "Cliente Y", 700),  # deve falhar
+]
 
-pix = Pix(2.50, "café coado", "123", "pikipeiii")
-processar_pagamento(pix)
+for pagamento in pagamentos:
+    processar_pagamento(pagamento)
+
+# teste antigo:
+# pix = Pix(2.50, "café coado", "123", "pikipeiii")
+# processar_pagamento(pix)
+
+# cartao= CartaoCredito(400, "Tênis esportivo", "1234 5678 9123 4567", "Cliente X", 500)
+# processar_pagamento(cartao)
+
+# boleto= Boleto(89.90, "Livro de Python", "123456789000", "2025-01-10")
+
+# processar_pagamento(boleto)

@@ -32,8 +32,13 @@
         },
         {
             "label": "2025-12-10_14-28-45",
-            "content": "from abc import ABC, abstractclassmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id:str, tipo: str, horaEntrada: int):\n        self.__id=id\n        self.__tipo=tipo\n        self.__horaEntrada=horaEntrada\n\n    def getEntrada(self):\n        return self.__horaEntrada\n\n    def setEntrada(self, horaEntrada: int):\n        self.__horaEntrada=horaEntrada\n\n    def getTipo(self):\n        return self.__tipo\n\n    def getID(self):\n        return self.__id\n    \n    @abstractmethods\n\n    def calcularValor(self):\n        pass\n\n    def __str__(self):\n        return f\"{self.__tipo} : {self.__id} : {self.__horaEntrada}\"\n\n\n\nclass Bike(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n\n\nclass Moto(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(sel, horaSaida: int):\n\nclass Carro(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n\n\nclass Estacionamento:\n\n\ndef main():\n\n\nmain()",
+            "content": "@@ -759,26 +759,8 @@\n t):%0A\n-        return 3.0\n %0A%0Acl\n@@ -906,53 +906,8 @@\n t):%0A\n-        return (horaSaida-getEntrada)/20%0A    \n %0Acla\n",
             "lines": "57"
+        },
+        {
+            "label": "2025-12-13_13-41-06",
+            "content": "from abc import ABC, abstractclassmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id:str, tipo: str, horaEntrada: int):\n        self.__id=id\n        self.__tipo=tipo\n        self.__horaEntrada=horaEntrada\n\n    def getEntrada(self):\n        return self.__horaEntrada\n\n    def setEntrada(self, horaEntrada: int):\n        self.__horaEntrada=horaEntrada\n\n    def getTipo(self):\n        return self.__tipo\n\n    def getID(self):\n        return self.__id\n    \n    @abstractmethods\n\n    def calcularValor(self):\n        pass\n\n    def __str__(self):\n        return f\"{self.__tipo} : {self.__id} : {self.__horaEntrada}\"\n\n\n\nclass Bike(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n        return 3.0\n\nclass Moto(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(sel, horaSaida: int):\n        return (horaSaida-getEntrada)/20\n    \nclass Carro(Veiculo):\n    def __init__(self, id: str, tipo: str):\n        super().__init__(id, tipo)\n\n    def calcularValor(self, horaSaida: int):\n\n\nclass Estacionamento:\n\n\ndef main():\n\n\nmain()",
+            "lines": "58"
         }
     ]
 }
