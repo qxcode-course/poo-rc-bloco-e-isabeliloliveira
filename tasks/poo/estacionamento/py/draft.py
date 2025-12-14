@@ -39,14 +39,14 @@ class Moto(Veiculo):
     def __init__(self, id: str, tipo: str):
         super().__init__(id, tipo)
 
-    def calcularValor(sel, horaSaida: int):
+    def calcularValor(sel, horaSaida: float):
         return (horaSaida-getEntrada)/20
     
 class Carro(Veiculo):
     def __init__(self, id: str, tipo: str):
         super().__init__(id, tipo)
 
-    def calcularValor(self, horaSaida: int):
+    def calcularValor(self, horaSaida: float):
 
 
 class Estacionamento:
