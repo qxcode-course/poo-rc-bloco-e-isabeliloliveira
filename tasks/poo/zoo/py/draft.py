@@ -54,11 +54,12 @@ def apresentar(animal:Animal):
     print(animal.fazer_som())
     print(animal.mover())
 
+animais: list[Animal] = [Urso("urso"), Rato("rato"), Rinoceronte("rino")]
 
-
-
-
-
+for animal in animais:
+    print(animal.apresentar_nome())
+    print(animal.fazer_som())
+    print(animal.mover())
 
 
 

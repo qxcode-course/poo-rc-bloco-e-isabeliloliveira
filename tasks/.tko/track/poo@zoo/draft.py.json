@@ -37,8 +37,23 @@
         },
         {
             "label": "2025-12-14_20-33-13",
-            "content": "from abc import ABC, abstractmethod\n\nclass Animal:\n    def __init__(self, nome:str):\n        self.nome=nome\n    \n\n    def apresentar_nome(self):\n        print(f\"Eu sou um(a) {self.nome}!\")\n\n    @abstractmethod\n    def fazer_som(self):\n        pass\n\n    @abstractmethod\n    def mover(self):\n        pass \n\nclass Urso(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    \n    def fazer_som(self):\n        return f\"O Urso faz ruuu!\"\n    \n    def mover(self):\n        return \"Urso est\u00e1 em movimento: grrr grrr\"\n\nclass Rato(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        return f\"O Rato faz quiiii!\"\n    \n    def mover(self):\n        return \"O Rato est\u00e1 em movimento: squeak squeak\"\n\n\nclass Rinoceronte(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        return f\"O Rinoceronte faz brurrr!\"\n    \n    def mover(self):\n        return \"O Rinoceronte est\u00e1 em movimento:  ploft ploft\"\n\n\ndef apresentar(animal:Animal):\n    print(animal.apresentar_nome())\n    print(animal.fazer_som())\n    print(animal.mover())\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "content": "@@ -1144,81 +1144,10 @@\n ))%0A%0A\n-animais: list%5BAnimal%5D = %5BUrso(%22urso%22), Rato(%22rato%22), Rinoceronte(%22rino%22)%5D\n+%0A%0A\n %0A%0A%0A%0A\n",
             "lines": "87"
+        },
+        {
+            "label": "2025-12-14_23-41-10",
+            "content": "@@ -1219,71 +1219,8 @@\n )%5D%0A%0A\n-for animal in animais:%0A    print(animal.apresentar_nome())%0A    \n %0A%0A%0A%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2025-12-14_23-44-32",
+            "content": "@@ -1282,59 +1282,8 @@\n     \n-print(animal.fazer_som())%0A    print(animal.mover())\n %0A%0A%0A%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-12-14_23-45-47",
+            "content": "from abc import ABC, abstractmethod\n\nclass Animal:\n    def __init__(self, nome:str):\n        self.nome=nome\n    \n\n    def apresentar_nome(self):\n        print(f\"Eu sou um(a) {self.nome}!\")\n\n    @abstractmethod\n    def fazer_som(self):\n        pass\n\n    @abstractmethod\n    def mover(self):\n        pass \n\nclass Urso(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    \n    def fazer_som(self):\n        return f\"O Urso faz ruuu!\"\n    \n    def mover(self):\n        return \"Urso est\u00e1 em movimento: grrr grrr\"\n\nclass Rato(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        return f\"O Rato faz quiiii!\"\n    \n    def mover(self):\n        return \"O Rato est\u00e1 em movimento: squeak squeak\"\n\n\nclass Rinoceronte(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        return f\"O Rinoceronte faz brurrr!\"\n    \n    def mover(self):\n        return \"O Rinoceronte est\u00e1 em movimento:  ploft ploft\"\n\n\ndef apresentar(animal:Animal):\n    print(animal.apresentar_nome())\n    print(animal.fazer_som())\n    print(animal.mover())\n\nanimais: list[Animal] = [Urso(\"urso\"), Rato(\"rato\"), Rinoceronte(\"rino\")]\n\nfor animal in animais:\n    print(animal.apresentar_nome())\n    print(animal.fazer_som())\n    print(animal.mover())\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "lines": "88"
         }
     ]
 }
