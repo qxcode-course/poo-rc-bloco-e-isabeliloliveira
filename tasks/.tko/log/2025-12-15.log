@@ -67,3 +67,50 @@
 2025-12-15 02:53:20, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
 2025-12-15 02:53:20, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
 2025-12-15 02:58:51, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:114
+2025-12-15 02:59:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 03:06:17, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:114
+2025-12-15 03:22:04, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:116
+2025-12-15 03:22:05, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 03:22:17, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:116
+2025-12-15 03:22:17, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 03:24:34, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:120
+2025-12-15 03:39:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 03:41:26, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:120
+2025-12-15 03:43:12, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:120
+2025-12-15 04:38:44, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 04:38:47, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:39:35, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:120
+2025-12-15 04:42:44, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:122
+2025-12-15 04:43:41, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:122
+2025-12-15 04:44:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:122
+2025-12-15 04:44:11, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:44:11, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:44:12, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:44:12, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:45:34, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:45:37, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:45:38, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:47:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:47:48, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:47:49, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:48:06, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 04:48:07, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:48:16, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:48:25, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 04:48:29, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 04:48:30, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 04:49:30, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 04:49:39, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 05:15:05, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 05:15:32, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:121
+2025-12-15 05:15:47, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:25, size:121
+2025-12-15 05:16:10, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 05:16:15, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 05:16:16, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:25
+2025-12-15 05:16:42, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:50, size:121
+2025-12-15 15:44:12, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 15:44:12, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:50
+2025-12-15 15:44:57, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:75, size:121
+2025-12-15 15:46:00, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:50, size:121
+2025-12-15 15:47:51, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100, size:126
+2025-12-15 15:47:57, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100, size:122

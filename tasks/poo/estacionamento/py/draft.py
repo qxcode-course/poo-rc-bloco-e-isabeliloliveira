@@ -23,8 +23,10 @@ class Veiculo(ABC):
         pass
 
     def __str__(self) -> str:
-        return f"{self.__tipo} : {self.__id} : {self.__horaEntrada}"
-
+        tipo_fmt = self.getTipo().rjust(10, "_")
+        id_fmt = self.getID().rjust(10, "_")
+        return f"{tipo_fmt} : {id_fmt} : {self.getEntrada()}"
+        
 
 class Bike(Veiculo):
     def __init__(self, id: str, horaEntrada: int):
@@ -80,6 +82,9 @@ class Estacionamento:
         print(f"{veiculo.getTipo()} chegou {entrada} saiu {saida}. Pagar R$ {valor:.2f}")
         self.veiculos.remove(veiculo)
 
+    def passarTempo(self, tempo: int) -> None:
+        self.horaAtual += tempo
+
     def __str__(self) -> str:
         if not self.veiculos:
             return f"Hora atual: {self.horaAtual}"
@@ -103,12 +108,15 @@ def main():
         elif args[0] == "pagar":
             estacionamento.pagar(args[1])
 
+        elif args[0]=="tempo":
+            estacionamento.passarTempo(int(args[1]))
+
         elif args[0] == "estacionar":
             if args[1] == "bike":
-                estacionamento.estacionarVeiculo(Bike(args[2], estacionar.horaAtual))
+                estacionamento.estacionarVeiculo(Bike(args[2], estacionamento.horaAtual))
             if args[1] == "moto":
-                estacionamento.estacionarVeiculo(Moto(args[2], estacionar.horaAtual))
+                estacionamento.estacionarVeiculo(Moto(args[2], estacionamento.horaAtual))
             if args[1] == "carro":
-                estacionamento.estacionarVeiculo(Carro(args[2], estacionar.horaAtual))
+                estacionamento.estacionarVeiculo(Carro(args[2], estacionamento.horaAtual))
         
 main()
